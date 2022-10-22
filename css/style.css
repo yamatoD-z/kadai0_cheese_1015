@@ -1,0 +1,663 @@
+body{
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    padding: 0 0px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+header{
+    font-size:2.1rem;
+    color:black;
+
+}
+
+header img{
+    float: left;
+}
+
+
+.nav-a {
+    
+    color:#333;
+    text-decoration: none;
+    font-size:2.1rem;
+    
+}
+
+.gnavi__lists {
+    display: flex;
+    
+    list-style: none;
+    
+}
+.gnavi__list {
+    margin: 2.5rem 2.5rem 0px 5rem;
+    float: right;
+    height: 60px;
+}
+.gnavi__list:hover {
+    background-color: #0071BB;
+}
+.gnavi__list:not(:first-child)::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+.gnavi__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    transition: all .3s;
+}
+.gnavi__list:hover a {
+    color: #fff;
+}
+
+.dropdown__lists {
+    display: none;/*デフォルトでは非表示の状態にしておく*/
+    width: 100%;    
+    top: 0px;
+    left: 0;
+}
+.gnavi__list:hover .dropdown__lists {
+    display: block;/*Gナビメニューにホバーしたら表示*/
+}
+.dropdown__list {
+    background-color: #004d80;
+    width: 80px;
+    height: 60px;
+    transition: all .3s;
+    position: relative;
+    list-style: none;
+}
+.dropdown__list:not(:first-child)::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #3492d1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dropdown__list:hover {
+    background-color: #003558;
+}
+.dropdown__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+.dropdown__list a::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 5px);
+}
+
+.top-wrapper{
+    background-image: url(../img/mainbg.png);
+    height: 49rem;
+    background-size: cover;
+}
+
+.first-message{
+    font-size: 4.8rem;
+    color: white;
+    text-align: center;
+    padding: 18.8rem 0 1.5rem 0;
+    margin: 0;
+}
+
+.second-message{
+    font-size: 3.6rem;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0 18.8rem 0;
+    margin: 0;
+}
+
+.about-wrapper{
+    text-align: center;
+    padding: 6rem 0 0 0;
+    margin: 0;
+    color: #ffd61a;
+    font-size: 2.4rem;
+    
+    font-weight: bold;
+}
+
+#About{
+    font-size: 2.4rem;
+    
+    margin: 0px;
+}
+
+.about-title{
+    font-weight: 100;
+    color:#222222;
+    padding: 3rem 0px 6rem 0px;
+    margin: 0;
+    font-size: 18px;
+    
+}
+
+.about-detail{
+    font-size:1.6rem ;
+    font-weight: 100;
+    color:#707070;
+    padding: 0px 0px 3rem 0px;
+    margin: 0;
+    
+}
+
+.about-detail40{
+    font-size:1.6rem ;
+    color:#707070;
+    padding: 0px 0px 4rem 0px;
+    margin: 0;
+    
+    font-weight: 100;
+    
+}
+
+.about-detail80{
+    font-size:1.6rem ;
+    color:#707070;
+    padding: 0px 0px 8rem 0px;
+    margin: 0;
+    font-weight: 100;
+
+    
+}
+
+
+
+
+
+
+
+.first-images{
+    
+}
+
+.image-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+}
+
+.first-image{
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+}
+
+.slideshow {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    animation-name: loop-slide; /* アニメーション名 */
+    animation-duration: 10s; /* 開始から終了までの所要時間 */
+    animation-iteration-count: infinite; /* アニメーションのループ回数 */
+    animation-timing-function: linear; /* 動きの加減速 */
+    animation-delay: 0.1s;  /* アニメーションが開始するまでの遅延時間 */
+    animation-fill-mode: both;            /* アニメーション開始前・終了後の挙動 */
+     
+}
+
+
+    @keyframes loop-slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+
+      .slideshow:hover {
+        animation-play-state: paused;
+      }
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+
+
+#Course{
+    font-size: 2.4rem;
+    margin: 0px;
+}
+
+.course-wrapper{
+    text-align: center;
+    font: #222222;
+}
+
+.course-title{
+    margin-top: 6rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font: #222222;
+}
+
+.course-detail{
+    margin: 3rem 0 6rem 0;
+    font-size: 1.6rem;
+}
+
+.flex-wrapper{
+    margin: 0 auto;
+    
+    max-width: 136rem;
+    
+}
+
+.flex-ul{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    list-style: none;
+    margin: auto;
+    
+    
+}
+
+.flex-textbox{
+    flex:auto;
+    width:50%;
+    max-width: 68rem;
+    height: 46rem;
+    text-align: left;
+    background-color: #fafafa;
+}
+
+.flex-title{
+    margin-top: 12rem;
+    margin-bottom: 4rem;
+    margin-left: 5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.flex-title-left{
+    margin-top: 12rem;
+    margin-bottom: 4rem;
+    margin-left: 10rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.flex-detail-right{
+    margin: 0px 0px 0px 5rem;
+    width: 48rem;
+}
+
+.flex-detail-left{
+    margin: 0px 5rem 0px 10rem;
+    width: 48rem;
+}
+
+.flex-image{
+    flex:auto;
+    width:50%;
+    height: 46rem;
+    margin:0;
+    padding: 0;
+}
+
+.flex-image:hover{
+    transform: scale(1.2) rotate(-10deg) translateX(-50px);
+    
+}
+
+
+/* 以下をやろうとしたが、うまく行かず。
+https://apricot-design.com/staffblog/css-hover-idea-image/
+
+.image_box{
+    width: 350px;
+    display: block;
+  }
+  
+  .hover_2{
+    position: relative;
+      .img_wrap{
+        overflow: hidden;
+        img{
+          width: 100%;
+          transition: .3s;
+        }
+      }
+      &:hover{
+        .img_wrap{
+          img{
+            transform: scale(1.5) rotate(10deg);
+          }
+        }
+      }
+  } */
+
+#News{
+    font-size: 2.4rem;
+    margin: 0px;
+    padding-top: 6rem;
+    text-align: center;
+    color: #ffd61a;
+}
+
+.news-wrapper{
+    text-align: center;
+}
+
+.news-title{
+    margin: 0;
+    
+}
+
+.news-subtitle{
+    margin: 0;
+    padding-top: 6rem;
+    text-align: center;
+    color:#222222;
+    padding: 3rem 0 6rem 0;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.news-ul{
+    list-style: none;
+    text-align: center;
+
+}
+
+.news-li{
+    width: 30rem;
+    padding: 0 1.5rem 6rem 1.5rem;
+    display: inline-block;
+    justify-content: center;
+    
+}
+
+.news-img{
+    padding: 0;
+    margin: 0;
+
+}
+
+.news-date{
+    padding-top: 3rem;
+    padding-bottom: 2.4rem;
+    text-align: left;
+    margin: 0;
+}
+
+.news-detail{
+    padding: 0;
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.news-more{
+    width: 30rem;
+    margin: 0px;
+    font-size: 1.8rem;
+    height: 3rem;
+    padding: 1rem 0 1rem 0;
+    color: white;
+    background-color: #ffd61a;
+    display: inline-block;
+    justify-content: center;
+    align-items:center;
+}
+
+.news-more a{
+
+}
+
+.news-more:hover{
+    background-color: #707070;
+    display:inline-block;
+    justify-content: center;
+    align-items:center;
+}
+
+#Access{
+    font-size: 2.4rem;
+    margin: 0px;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    font-weight: bold;
+}
+
+.access-wrapper{
+    background-color: #fafafa;
+    text-align: center;
+    margin-top: 6rem;
+    
+}
+
+.access-title{
+    font-size: 1.8rem;
+    
+}
+
+.access-subtitle{
+    font-size: 1.8rem;
+    padding-bottom: 6rem;
+    
+    font-weight: normal;
+}
+
+iframe{
+    width: 100%;
+    max-width: 700px;
+}
+
+.access-address-wrapper{
+    font-size: 1.6rem;
+    margin: 0 auto;
+    width: 600px;
+
+}
+
+table {
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 0.2rem;
+    border-color: grey;
+    margin: auto;
+}
+
+.access-address-wrapper table{
+text-align: left;
+padding: 6rem 0 6rem 0;
+
+}
+
+.access-address-wrapper table td{
+    margin-bottom: 3rem;
+    
+    }
+
+#Contact{
+    font-size: 2.4rem;
+    margin: 0px;
+    
+    font-weight: bold;
+}
+
+
+.contact-wrapper{
+    background-color: white;
+    text-align: center;
+    
+    
+}
+
+.contact-title{
+    font-size: 1.8rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.contact-subtitle{
+    font-size: 1.8rem;
+    padding-bottom: 6rem;
+    font-weight: normal;
+}
+
+.form-wrapper{
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+}
+
+
+.form-left{
+    width: 30rem;
+}
+
+.form-right{
+    width: 40rem;
+}
+
+.form-right-checkbox{
+    width: 40rem;
+    padding-bottom: 2.4rem;
+    display: block;
+}
+
+#submit{
+    width: 30rem;
+    margin: 3rem 0 14rem 0;
+    font-size: 1.8rem;
+    height: 3rem;
+    padding: 1.2rem 0px 1.2rem 0px;
+    color: white;
+    background-color: #ffd61a;
+    display: inline-block;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+
+#submit:hover{
+    background-color: #707070;
+    display:inline-block;
+    justify-content: center;
+    align-items:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    max-width: 100%;
+    
+    position: relative;
+    bottom:0;
+    background-color:  #707070; 
+    color:white;
+    text-align: center;
+    z-index: 10;
+    
+    }
+
+footer p {
+    
+    padding: 3rem 0 3rem 0;
+    margin: 0px;
+    
+}
+
+.submit-button{
+    display: inline-block;
+    border-radius: 5%;
+    font-size: 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 1.2rem 8.8rem;
+    background: #ffd61a;
+    line-height: 2em;
+    transition: 0.5s;
+    color:#ffffff;
+    border-color: #ffffff;
+    
+}
+
+.submit-button:hover{
+    color: #bfbfbf;
+    background: #707070;
+}
+
+
+
+.inquiry{
+    width: 32.8rem;
+    height: 3.6rem;
+    border-color:#bfbfbf
+
+}
+
+.btn {
+    padding: 0.8rem 10rem;
+    color: white;
+    background-color: orange;
+    display: inline-block;
+}
+
+.send {
+    
+    margin: 3rem 0px 14rem 0px;
+}
